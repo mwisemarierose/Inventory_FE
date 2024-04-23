@@ -3,7 +3,6 @@ import { RiProductHuntLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import heroImg from "../../assets/inv-img.png";
-import logo from "../../assets/logo.jpeg";
 import { ShowOnLogin, ShowOnLogout } from "../../components/protect/HiddenLink";
 
 const Home = () => {
