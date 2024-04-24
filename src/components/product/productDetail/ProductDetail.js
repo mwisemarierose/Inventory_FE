@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import useRedirectLoggedOutUser from "../../../customHook/useRedirectLoggedOutUser";
 import { selectIsLoggedIn } from "../../../redux/features/auth/authSlice";
 import { getProduct } from "../../../redux/features/product/productSlice";
@@ -12,6 +13,7 @@ const ProductDetail = () => {
   useRedirectLoggedOutUser("/login");
   const dispatch = useDispatch();
 
+  const { id } = useParams();
 
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const { product, isLoading, isError, message } = useSelector(
@@ -27,13 +29,13 @@ const ProductDetail = () => {
 
   useEffect(() => {
     if (isLoggedIn === true) {
-      dispatch(getProduct());
+      dispatch(getProduct(id));
     }
 
     if (isError) {
       console.log(message);
     }
-  }, [isLoggedIn, isError, message, dispatch]);
+  }, [isLoggedIn, isError, message, dispatch,id]);
 
   return (
     <div className="product-detail">

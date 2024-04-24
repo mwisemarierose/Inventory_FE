@@ -17,6 +17,7 @@ import {
   getProducts,
 } from "../../../redux/features/product/productSlice";
 import { Link } from "react-router-dom";
+import { BiMinus } from "react-icons/bi";
 
 const ProductList = ({ products, isLoading }) => {
   const [search, setSearch] = useState("");
@@ -144,6 +145,13 @@ const ProductList = ({ products, isLoading }) => {
                         <span>
                           <FaTrashAlt
                             size={20}
+                            color={"red"}
+                            onClick={() => confirmDelete(_id)}
+                          />
+                        </span>
+                        <span>
+                          <BiMinus
+                            size={25}
                             color={"red"}
                             onClick={() => confirmDelete(_id)}
                           />
