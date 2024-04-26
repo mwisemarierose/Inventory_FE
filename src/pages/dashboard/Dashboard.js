@@ -19,7 +19,6 @@ console.log(isLoggedIn)
     if (isLoggedIn === true) {
       dispatch(getProducts());
     }
-
     if (isError) {
       console.log(message);
     }

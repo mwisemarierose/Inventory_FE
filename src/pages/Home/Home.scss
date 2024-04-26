@@ -1,8 +1,11 @@
 .home {
-  background-color: #030b6b;
+//  background image from assets
+  // background-image: url('../../assets/img1.jpeg');
+  // background-size:auto;
   min-height: 100vh;
 
   & nav {
+    
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     color: #fff;
@@ -29,7 +32,7 @@
 
 .hero {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -45,9 +48,6 @@
   & .hero-buttons a {
     color: #fff;
   }
-}
-.hero-image {
-  width: 50%;
 }
 @media screen and (max-width: 600px) {
   .hero {

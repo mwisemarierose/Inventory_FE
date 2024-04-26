@@ -3,6 +3,9 @@ import { RiProductHuntLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import heroImg from "../../assets/inv-img.png";
+import logo from "../../assets/logo.jpeg";
+import back from "../../assets/back.jpg";
+import img1 from "../../assets/img1.jpeg";
 import { ShowOnLogin, ShowOnLogout } from "../../components/protect/HiddenLink";
 
 const Home = () => {
@@ -10,7 +13,10 @@ const Home = () => {
     <div className="home">
       <nav className="container --flex-between ">
         <div className="logo">
-          <RiProductHuntLine size={35} />
+          {/* <RiProductHuntLine size={35} /> */}
+          <img src={logo} 
+          style={{ width: "50px", height:"auto",marginLeft:"0px" }}
+          />
         </div>
 
         <ul className="home-links">
@@ -35,41 +41,15 @@ const Home = () => {
           </ShowOnLogin>
         </ul>
       </nav>
-      {/* HERO SECTION */}
-      <section className="container hero">
-        <div className="hero-text">
-          <h3>KIGALI MONTREAL DESIGN Inventory {"&"} Stock Management Solution</h3>
-          <p>
-            Inventory system to control and manage proucts in the warehouse in
-            real timeand integrated to make it easier to develop your business.
-          </p>
-          {/* <div className="hero-buttons">
-            <button className="--btn --btn-secondary">
-              <Link to="/dashboard">Free Trial 1 Month</Link>
-            </button>
-          </div> */}
-          <div className="--flex-start">
-            <NumberText num="14K" text="Brand Owners" />
-            <NumberText num="23K" text="Active Users" />
-            <NumberText num="500+" text="Partners" />
-          </div>
-        </div>
-
-        <div className="hero-image">
-          <img src={heroImg} alt="Inventory" />
-        </div>
-      </section>
+      {/* <h3 style={{marginLeft:"250Ppx",color:"white"}}>KIGALI MONTREAL DESIGN Inventory {"&"} Stock Management Solution</h3> */}
     </div>
   );
 };
+// image under the nav bar to cover the whole page with inline styling to cover the whole rest of the page
+<img src={back} alt="hero" className="hero-img" style={{width:"100%",height:"100vh"}} />
 
-const NumberText = ({ num, text }) => {
-  return (
-    <div className="--mr">
-      <h3 className="--color-white">{num}</h3>
-      <p className="--color-white">{text}</p>
-    </div>
-  );
-};
+
+
+
 
 export default Home;
