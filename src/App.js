@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
 import Login from "./pages/auth/Login";
 import Home1 from "./pages/Home/Test";
 import Register from "./pages/auth/Register";
